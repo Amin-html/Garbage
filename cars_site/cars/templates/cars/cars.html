@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars view</title>
+</head>
+<body>
+    <h1 style="display: flex; justify-content: center; margin-bottom: 1px; color: #464545;"
+    >Cars List</h1>
+    <a href="/" style="text-decoration: none; color: rgb(59, 59, 58);">
+        Back to Home</a>
+
+        <h1>Cars</h1>
+
+        {% for car in cars %}
+            <li>{{ car.brand }} {{ car.model }} ({{ car.year }}) - ${{ car.price }}</li>
+        {% endfor %}
+
+        <h2>Engines</h2>
+
+        {% for engine in engines %}
+            <li>{{ engine.type }} - {{ engine.weight }} kg, {{ engine.horsepower }} HP</li>
+        {% endfor %}
+</body>
+</html>
